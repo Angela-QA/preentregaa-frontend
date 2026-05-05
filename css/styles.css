@@ -1,0 +1,23 @@
+header{
+    background-color: #336699;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+header img¨{
+    width:80px;
+}
+
+footer{
+    background-color: blue;
+    padding:20px;
+    text-align:center;
+}
+nav li {
+    display: inline;
+    margin:0 15px;
+}
+.copyright{
+    font-size: 12px;
+    color: white;
+}
