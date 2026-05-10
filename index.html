@@ -3,72 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
-        <title> Documento </title>
+        <title> Documentos </title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <header>
-            <img src="imagenes/logo.png" alt="Imagen del logo son tres puntas de fecha posiconadas en forma horizontal de color naranha" width="150">
-            <h1> Descubriendo lugares de Argentina</h1>
+        <header class="header">
+            <img src="imagenes/logo.png"
+             alt="Imagen del logo son tres puntas de fecha posiconadas en forma horizontal de color naranha" 
+             class="header__logo"
+             width="150">
+            <h1 class="header__title"> Descubriendo lugares de Argentina</h1>
         </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Inicio</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Inicio</a>
                 </li>
 
-                <li>
-                    <a href="index.html">Lugares</a>
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Lugsres/a>
                 </li>
-
-                <li>
-                    <a href="pages/contacto.html">Contactos</a>
+                <li class="nav__item">
+                    <a href="pages/contacto.html" class="nav__link">Contactos</a>
                 </li>
-
 
             </ul>
         </nav>
-        <main>
-            <section>
-                <video controls width="200">
+        <!--<main class="main">
+            <section class="video-section">
+                <video class="video-section__player" controls width="200">
                     <source src="video/cono de arita.mp4" type="video/mp4">
                     <track src="subtitulos.vtt" kind="subtitulos" srclang="es" label="Español">
                     Tu navegador no soporta la reproduccion del video.
                 </video>
-            </section>
-            ><table border="1">
-                <caption>Los lugares buscados</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Correo electrónico</th>
-                        <th scope="col">Mensaje corto</th>
-                        <th scope="col">Estado</th>
+            </section class="table-section"
+            ><table class="table-section__table" border="1">
+                <caption class="table-section__caption">Los lugares buscados</caption>
+                <thead class="table-section__header">
+                    <tr class="table-section__row">
+                        <th class="table-section__celda" scope="col">Nombre</th>
+                        <th class="table-section__celda" scope="col">Correo electrónico</th>
+                        <th class="table-section__celda" scope="col">Mensaje corto</th>
+                        <th class="table-section__celda" scope="col">Estado</th>
                         
                         
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Ana Lopez</td>
-                        <td>anaLopez124@yahoo.com</td>
-                        <td>Excelente paisaje!!</td>
-                        <td rowspan="2">Respondido</td>
+                <tbody class="table-section__body">
+                    <tr class="table-section__row ">
+                        <td class="table-section__celda">Ana Lopez</td>
+                        <td class="table-section__celda">anaLopez124@yahoo.com</td>
+                        <td class="table-section__celda">Excelente paisaje!!</td>
+                        <td class="table-section__celda" rowspan="2">Respondido</td>
                     </tr>
-                    <tr>
-                        <td colspan="3">Mensajes del blog</td>      
+                    <tr class="table-secton_-row">
+                        <td class="table-section__celda" colspan="3">Mensajes del blog</td>      
                     </tr>
                     
-                    
-
-                </tbody>
+                 </tbody>
 
             </table>
             
-        </main>
-        <footer>
-            <p class="copyright">
-                © 2026 Descubriendo lugares de Argentina
+        </main>-->
+        <footer class="footer">
+            <p class="footer__text">
+                © 2026 Descubriendo lugares de Argentina. Todos los derechos reservados.
             </p >
         </footer>
     </body>
