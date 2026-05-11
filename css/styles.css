@@ -5,11 +5,19 @@
     box-sizing: border-box
 }
 
-header{
+.header{
     background-color: #336699;
     color:white;
     text-align:center;
     padding:10px;
+}
+body{
+    font-family:"Atkison Hyperlegible";
+    font-weight: 400;
+}
+.header__titulo{
+    font-family: "Atkinson Hyperlegigle";
+    font-weight: 700;
 }
 .header__logo{
     width:80px;
@@ -17,20 +25,20 @@ header{
 .header__title{
     color:white;
 }
+
 .nav{
     background: pink;
-    margin:10px;
+    margin:0;
     padding:10px;
 }
 .nav__list{
     list-style: none;
-    margin:0;
-    padding:0;
-    color:orange;
+    
+    
+    
 }
 .nav__item{
-    display:inline-block;
-    background:red !important;
+    display:inline;
     margin:0 15px;
     vertical-align: middle;
 }
@@ -43,6 +51,20 @@ header{
 .nav__link:hover {
     text-decoration: underline;
     color: white;
+}
+.video-section__player--hidden{
+    display: none;
+}
+.main{
+    min-height: 80vh;
+    background-color: #D6EAF8;
+    background-image: url('../imagenes/mapa.png');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.table-section__table--hidden{
+    display:none;
 }
  .footer{
     background-color: #6688bb;
