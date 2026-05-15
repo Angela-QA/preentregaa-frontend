@@ -4,74 +4,89 @@
         <meta charset="UTF-8">
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title> Documentos </title>
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
-        
-        
+        <link href="https://googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <header class="header">
-            <img src="imagenes/logo.png"
-             alt="Imagen del logo son tres puntas de fecha posiconadas en forma horizontal de color naranja" 
-             class="header__logo"
-             width="150">
-            <h1 class="header__titulo"> Descubriendo lugares de Argentina</h1>
+            <div class="header__caja">
+               <img src="imagenes/logo.png"
+               alt="Imagen del logo son tres puntas de fecha posiconadas en forma horizontal de color naranja" 
+               class="header__logo"
+               width="150">
+               <h1 class="header__titulo"> Descubriendo lugares de Argentina</h1>
+            </div>
         </header>
         <nav class="nav">
+             
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="index.html" class="nav__link">Inicio</a>
                 </li>
 
                 <li class="nav__item">
-                    <a hrex.html" class="nav__link">Lugsres</a>
+                    <a href="index.html" class="nav__link">Lugares</a>
                 </li>
                 <li class="nav__item">
                     <a href="pages/contacto.html" class="nav__link">Contactos</a>
                 </li>
-
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Reseñas</a>
+                </li>
+                <li class="nav__item">
+                    <label for="control-admin" class="nav__link">Admin</label>
+                </li>
             </ul>
         </nav>
         <main class="main">
-            <!--<h1 class="hero__titulo">Soy un Título en main</h1>
-            <p clas="hero__texto"> Yo soy un parrafo en el main</p>--
-            <section class="video-section">
-                <video class="video-section__player video-section__player--hidden" controls width="200">
-                    <source src="video/cono de arita.mp4" type="video/mp4">
-                    <track src="subtitulos.vtt" kind="subtitulos" srclang="es" label="Español">
-                    Tu navegador no soporta la reproduccion del video.
-                </video>
-            </section class="table-section"
-            ><table class="table-section__table table-section__table--hidden" border="1">
-                <caption class="table-section__caption">Los lugares buscados</caption>
-                <thead class="table-section__header">
-                    <tr class="table-section__row">
-                        <th class="table-section__celda" scope="col">Nombre</th>
-                        <th class="table-section__celda" scope="col">Correo electrónico</th>
-                        <th class="table-section__celda" scope="col">Mensaje corto</th>
-                        <th class="table-section__celda" scope="col">Estado</th>
-                        
-                        
-                    </tr>
-                </thead>
-                <tbody class="table-section__body">
-                    <tr class="table-section__row ">
-                        <td class="table-section__celda">Ana Lopez</td>
-                        <td class="table-section__celda">anaLopez124@yahoo.com</td>
-                        <td class="table-section__celda">Excelente paisaje!!</td>
-                        <td class="table-section__celda" rowspan="2">Respondido</td>
-                    </tr>
-                    <tr class="table-secton_-row">
-                        <td class="table-section__celda" colspan="3">Mensajes del blog</td>      
-                    </tr>
-                    
-                 </tbody>
+            <div class="main__caja">
+                <h2 class="main__titulo">Bienvenidos a este recorrido</h2>
+                <p class="main__texto">En este blog vas a encontrar algunos paisajes, cultura y rincones únicos de Argentina.</p>
+                <section class="main__seccion">
+                    <video class="main__video" controls width="600">
+                        <source src="/videos/cono de arita.mp4" type="video/mp4">
+                        <track src="subtitulos.vtt" kind="subtitulos" srclang="es" label="Español">
+                        Tu navegador no soporta la reproduccion del video.
+                    </video>
+                    <div class="main__video-info">
+                        <h3 class="main.video-titulo">Cono de Arita</h3>
+                        <p class="main__video-texto">
+                            Esta formación en Salta es la demostracón perfecta de los secretos que esconde nuestro país. Un paisaje subrealista, remoto y virgen que inspira el espíritu de este blog.
+                        </p>
 
-            </table>
-            
+                    </div>
+
+        
+                </section> 
+                
+                <section class="table-seccion">
+                    <table class="table-seccion__table" border="1">
+                        <caption class="table-seccion__caption">Los lugares buscados</caption>
+                        <thead class="table-seccion__header">
+                            <tr class="table-seccion__row">
+                                <th class="table-seccion__celda" scope="col">Nombre</th>
+                                <th class="table-seccion__celda" scope="col">Correo electrónico</th>
+                                <th class="table-seccion__celda" scope="col">Mensaje corto</th>
+                                <th class="table-seccion__celda" scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-seccion__body">
+                            <tr class="table-seccion__row ">
+                                <td class="table-seccion__celda">Ana Lopez</td>
+                                <td class="table-seccion__celda">anaLopez124@yahoo.com</td>
+                                <td class="table-seccion__celda">Excelente paisaje!!</td>
+                                <td class="table-seccion__celda" rowspan="2">Respondido</td>
+                            </tr>
+                            <tr class="table-secton_-row">
+                                <td class="table-seccion__celda" colspan="3">Mensajes del blog</td>      
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
         </main>
         <footer class="footer">
             <p class="footer__text">
