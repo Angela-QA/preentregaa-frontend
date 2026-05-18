@@ -2,12 +2,13 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Documentos </title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">>
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
@@ -28,7 +29,7 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="index.html" class="nav__link">Lugares</a>
+                    <a href="lugares.html" class="nav__link">Lugares</a>
                 </li>
                 <li class="nav__item">
                     <a href="pages/contacto.html" class="nav__link">Contactos</a>
@@ -36,9 +37,7 @@
                 <li class="nav__item">
                     <a href="index.html" class="nav__link">Reseñas</a>
                 </li>
-                <li class="nav__item">
-                    <label for="control-admin" class="nav__link">Admin</label>
-                </li>
+                
             </ul>
         </nav>
         <main class="main">
@@ -46,7 +45,7 @@
                 <h2 class="main__titulo">Bienvenidos a este recorrido</h2>
                 <p class="main__texto">En este blog vas a encontrar algunos paisajes, cultura y rincones únicos de Argentina.</p>
                 <section class="main__seccion">
-                    <video class="main__video" controls width="600">
+                    <video class="main__video" controls">
                         <source src="/videos/cono de arita.mp4" type="video/mp4">
                         <track src="subtitulos.vtt" kind="subtitulos" srclang="es" label="Español">
                         Tu navegador no soporta la reproduccion del video.
@@ -63,10 +62,10 @@
                 </section> 
                 
                 <section class="table-seccion">
-                    <table class="table-seccion__table" border="1">
-                        <caption class="table-seccion__caption">Los lugares buscados</caption>
+                    <table class="table-seccion__tabla">
+                        <caption class="table-seccion__caption">Mensajes de los lectores</caption>
                         <thead class="table-seccion__header">
-                            <tr class="table-seccion__row">
+                            <tr class="table-seccion__fila">
                                 <th class="table-seccion__celda" scope="col">Nombre</th>
                                 <th class="table-seccion__celda" scope="col">Correo electrónico</th>
                                 <th class="table-seccion__celda" scope="col">Mensaje corto</th>
@@ -74,13 +73,13 @@
                             </tr>
                         </thead>
                         <tbody class="table-seccion__body">
-                            <tr class="table-seccion__row ">
+                            <tr class="table-seccion__fila ">
                                 <td class="table-seccion__celda">Ana Lopez</td>
                                 <td class="table-seccion__celda">anaLopez124@yahoo.com</td>
                                 <td class="table-seccion__celda">Excelente paisaje!!</td>
                                 <td class="table-seccion__celda" rowspan="2">Respondido</td>
                             </tr>
-                            <tr class="table-secton_-row">
+                            <tr class="table-seccion__fila">
                                 <td class="table-seccion__celda" colspan="3">Mensajes del blog</td>      
                             </tr>
                         </tbody>

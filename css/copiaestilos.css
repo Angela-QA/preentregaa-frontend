@@ -6,12 +6,6 @@
 }
 body{
     font-family:"Atkinson Hyperlegible", sans-serif;
-    background-color: #D6EAF8;
-    background-image: url('../imagenes/mapa.png');
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: 400px auto;
-    padding:0;
     
 }
 .header__caja{
@@ -23,13 +17,17 @@ body{
     padding:0 10px;
     gap:24px;
 }
+
 .header__titulo{
+    font-family: "Atkinson Hyperlegible";
     font-weight: 700;
     font-size:3rem;
     color:white;
     margin:0; 
     padding: 40px 20px;
+    
 }
+
 .header__logo {
     height:auto;
     width:100px;
@@ -49,23 +47,33 @@ body{
     color:black;
 }
 .nav__item{
+    
     font-size:24px;
     margin:0 15px;
     vertical-align: middle;
 }
-.nav__link{
+.nav__link {
     text-decoration: none;
-    cursor: pointer;
-    color:black;
 }
     /*Al pasar el mouse*/
 .nav__link:hover {
-    text-decoration: none;
-    color: white;
+    text-decoration: underline;
+    /*color: white;*/
 }
 
+
+.main{
+    min-height: 80vh;
+    background-color: #D6EAF8;
+    background-image: url('../imagenes/mapa.png');
+    background-repeat:no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    background-attachment: fixed;
+    padding:50px 0;
+}
 .main__caja{
-    /*display:flex;*/
+    display:flex;
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
@@ -76,7 +84,7 @@ body{
     display:flex;
     flex-direction:row;
     align-items: flex-start;
-    gap:30px;
+    gap:30;
     width:100%;
     max-width:1100px;
     margin-top: 50px;
@@ -86,18 +94,20 @@ body{
     width:500px;
     height:auto;
     flex-shrink: 0;
-
+    margin-top:0;
 }
 .main__video-info{
     flex:1;
     margin-left: 35px;
     /*background-color:rgba(255,255,255,0.5);*/
     border-radius: 4px;
+
 }
 .main__video-info *{
     margin-top:0;
     margin-bottom: 0;
     padding: 0;
+    
 }
 .main__video-titulo{
     margin-top:0;
@@ -118,14 +128,21 @@ body{
     border-radius:4px;
 
  }
+
 .main__texto{
     font-size:1.4rem;
     background-color:rgba(255,255,255,0.5);
     border-radius:4px;
 }
-/*.table-seccion{
+.nav__link{
+    cursor:pointer;
+}
+.table-seccion{
     display:none;
-}*/
+}
+.nav:hover ~ .main .table-seccion{
+    display:block;
+}
 .table-seccion{
     background-color: rgba(255,255,255,0.95);
     padding:20px;
@@ -148,10 +165,6 @@ body{
     width:100%;
     border-collapse: collapse;
     margin:20px;
-    display:none;
-}
-.table-seccion:hover .table-seccion__tabla{
-    display:table;
 }
 .table-seccion__celda{
     padding: 12px 15px;
@@ -173,60 +186,4 @@ body{
 .footer__text{
     color:#f2f2f2;
     font-size:14px;
-} 
-.lugares__caja{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    /*align-items: center;*/
-    width:100%;
-    margin-top:40px;
-    flex-wrap: wran;
-   gap: 30px;
-   
-} 
-.tarjeta *{
-    margin-top: 4px;
-    margin-bottom:4px;
-}
-.tarjeta{
-    background-color:rgba(214,234,248,0.75);
-    width: 300px;
-    padding:20px;
-} 
-.tarjeta-destacada .tarjeta__dato{
-    display:inline-block;
-    background-color:#ffaa33;
-    color:black;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:0.9rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-    margin-bottom: 20px;
-    
-}
-.tarjeta-destacada .tarjeta__boton{
-    display:block;
-    width:100%;
-    margin-top: 10px;
-}
-.tarjeta p{
-    text-align: justify;
-    color:black;
-}
-.tarjeta__imagen{
-   width:100%;
-   height:200px;
-   object-fit: cover; 
-}
-.tarjeta__dato{
-    display:block;
-    font-weight: bold;
-    
-}
-.tarjeta__boton{
-    margin-top:20px;
-    color:#336699;
-    font-size: 1rem;
-}
- 
+}   
