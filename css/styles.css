@@ -229,4 +229,37 @@ body{
     color:#336699;
     font-size: 1rem;
 }
+.resenias__caja{
+    max-width: 1200px;
+    margin:40px auto;
+    background-color: rgba(255,255,258,0.4);
+    border-radius: 12px;
+    padding:20px;
+    margin-top: 40px;
+}
+.comentarios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+    min-height: 55vh;
+}
+.tarjetaComentarios{
+    background-color: rgba(255,255,255,0.9);
+    padding:20px;
+    border-radius: 8px;
+    /*borde suave*/
+    border:1px solid #dddddd;
+    /*sombra*/
+    box-shadow: 0 4px 6px  rgba(0,0,0,0.5);
+    transition: transform 0.35 ease, box-shadow 0.35 ease, border-color 0.35 ease;
+} 
+.tarjetaComentarios:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    border-color: #ffaa33;
+}
+.estrellas{
+    color:#ffaa33;
+    margin-top: 10px;
+}
  
