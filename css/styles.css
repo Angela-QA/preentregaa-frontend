@@ -164,13 +164,36 @@ body{
 .table-seccion__fila{
     border-bottom: 1px solid #dddddd;
 }
+.footer__caja{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footer__redes{
+    display: flex;
+    gap: 20px;
+}
+.footer__link-red{
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+.footer__link-red:hover{
+    color:#ffaa33;
+}
  .footer{
     background-color: #6688bb;
     padding:20px;
     text-align:center;
+
 /*  */
 }
-.footer__text{
+.footer__texto{
     color:#f2f2f2;
     font-size:14px;
 } 
@@ -262,4 +285,66 @@ body{
     color:#ffaa33;
     margin-top: 10px;
 }
- 
+ /*Interruptor de emergencia: solo se activa en pantallas menores a 768 pixeles(celu)*/
+ @media(max-width:768px){
+    .comentarios{
+        /*que grid se pongan en un única columna*/
+        grid-template-columns: 1fr;
+        /*Achicamos espacios entre estructuras*/
+        gap:20px;
+    }
+ }
+ .contacto__caja{
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: rgba(255,255,255,0.45);
+    border-radius:12px;
+    padding: 30px;
+ }
+ .contacto__label{
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color:#333;
+
+ }
+ .contacto__input,
+ .contacto__textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-family: inherit;
+    /* Evita que los casilleros se salgan de la caja*/
+    box-sizing: border-box;
+    transition: border-color 0.35 ease, box-shadow .035 ease;
+
+ }
+ /*efecto visual de resplandor al pasar el mouse*/
+ .contacto__input:focus,
+ .contacto__textarea:focus {
+    outline:none;
+    border-color: #ffaa33;
+    box-shadow: 0 0 8px rgba(255,170,51,0.4);
+ }
+ .contacto__boton {
+    display: block;
+    width:100%;
+    background-color: #336699;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+@media(max-width: 768px) {
+    .contacto__input,
+    .contacto__textarea {
+        margin-bottom: 15px;
+    }
+}
