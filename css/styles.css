@@ -2,7 +2,7 @@
 * {
     margin:0;
     padding:0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 body{
     font-family:"Atkinson Hyperlegible", sans-serif;
@@ -43,8 +43,8 @@ body{
     display:flex;
     justify-content: space-between;
     list-style: none;
-    font-family:'Atkinson Hyperlegible';
-    font-weight:700;
+    /*font-family:'Atkinson Hyperlegible';*/
+   /* font-weight:700;*/
     font-size:20px;
     color:black;
 }
@@ -65,7 +65,7 @@ body{
 }
 
 .main__caja{
-    /*display:flex;*/
+    display:flex;
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
@@ -116,16 +116,12 @@ body{
     font-size: 2.6rem;
     padding:8px 20px;
     border-radius:4px;
-
- }
+}
 .main__texto{
     font-size:1.4rem;
     background-color:rgba(255,255,255,0.5);
     border-radius:4px;
 }
-/*.table-seccion{
-    display:none;
-}*/
 .table-seccion{
     background-color: rgba(255,255,255,0.95);
     padding:20px;
@@ -190,8 +186,6 @@ body{
     background-color: #6688bb;
     padding:20px;
     text-align:center;
-
-/*  */
 }
 .footer__texto{
     color:#f2f2f2;
@@ -204,7 +198,7 @@ body{
     /*align-items: center;*/
     width:100%;
     margin-top:40px;
-    flex-wrap: wran;
+    flex-wrap: wrap;
    gap: 30px;
    
 } 
@@ -274,7 +268,7 @@ body{
     border:1px solid #dddddd;
     /*sombra*/
     box-shadow: 0 4px 6px  rgba(0,0,0,0.5);
-    transition: transform 0.35 ease, box-shadow 0.35 ease, border-color 0.35 ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35 ease;
 } 
 .tarjetaComentarios:hover{
     transform: translateY(-8px);
@@ -305,21 +299,23 @@ body{
     display: block;
     margin-top: 15px;
     font-weight: bold;
-    color:#333;
+    color: #111111;
 
  }
  .contacto__input,
  .contacto__textarea {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
-    border: 1px solid #333333;
+    border: 2px solid #222222;
     border-radius: 4px;
     font-family: inherit;
     /* Evita que los casilleros se salgan de la caja*/
     box-sizing: border-box;
-    transition: border-color 0.35 ease, box-shadow .035 ease;
+    transition: border-color 0.35s ease, box-shadow .035s ease;
+    font-size: 1.1rem;
+    color:#333333;
 
  }
  /*efecto visual de resplandor al pasar el mouse*/
@@ -347,4 +343,49 @@ body{
     .contacto__textarea {
         margin-bottom: 15px;
     }
+}
+.espaciador-gracias {
+    width: 100%;
+    height: 48px;
+    background-color: #ffaa33;
+    display: block;
+}
+.gracias__caja{
+    max-width: 650px;
+    margin: 60px auto;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    padding: 40px 30pX;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.gracias__titulo {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+    color:#336699;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.gracias__texto {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+.gracias__boton {
+    display:inline-block;
+    background-color: #336699;
+    color: white;
+    padding: 12px 35px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    font-size: 1.1rem;
+    margin-top: 25px;
+    transition: blackground-color 0.2s ease;
+}
+.gracias__boton:hover {
+    background-color: #20446a;
+    
 }
