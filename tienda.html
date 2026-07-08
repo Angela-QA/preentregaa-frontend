@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lan="es">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reseñas</title>
+        <title> Documentos </title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="css/styles.css">
+
     </head>
     <body>
-       <header class="header">
+        <header class="header">
             <div class="header__caja">
                <img src="imagenes/logo.png"
                alt="Imagen del logo son tres puntas de fecha posiconadas en forma horizontal de color naranja" 
@@ -22,10 +23,12 @@
             </div>
         </header>
         <nav class="nav">
-             <ul class="nav__list">
+             
+            <ul class="nav__list">
                 <li class="nav__item">
                     <a href="index.html" class="nav__link">Inicio</a>
                 </li>
+
                 <li class="nav__item">
                     <a href="lugares.html" class="nav__link">Lugares</a>
                 </li>
@@ -38,58 +41,25 @@
                 <li class="nav__item">
                     <a href="resenias.html" class="nav__link">Reseñas</a>
                 </li>
+                
             </ul>
-        </nav> 
+        </nav>
         <main class="main">
-            <div class="resenias__caja">
-                <section class="comentarios">
-                    <div class="tarjetaComentarios">
-                        <h4 class="comentarios__nombre">
-                            Carlos Gomez
-                        </h4>
-                        <p class="comentarios_opinion">
-                            Los datos sobre el Cono de Arita  me sirviron un montón para mi viaje.¡Excelente blog!                              
-                        </p>
-                        <div class="estrellas">
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="tarjetaComentarios">
-                        <h4 class="comentarios__nombre">
-                            Marina Silva
-                        </h4>
-                        <p class="comentarios_opinion">
-                            Me encanto la recomendacion del Bañado la Estrella. no conocia ese lugar de Argentina.                             
-                        </p>
-                        <div class="estrellas">
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="tarjetaComentarios">                        <h4 class="comentarios__nombre">
-                            Lucas Díaz
-                        </h4>
-                        <p class="comentarios_opinion">
-                         Hermoso diseño de blog y muy buena información sobre el trekking en la Laguna Turquesa.                            
-                        </p>
-                        <div class="estrellas">
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                            <i class="fa fa-solid fa-star"></i>
-                        </div>
-                    </div>
+            <div class="tienda_caja">
+                <h2 class="main__titulo">
+                    Alquiler de Equipamiento Técnico
+                </h2>
+                <p class="main__texto">
+                    Equipate para que tus aventuras en los rincones más ocultos del país
+                </p>
+                <!--Acá es donde Js va poner los productos-->
+                <section class="productos-seccion">
+
                 </section>
             </div>
         </main>
-    
         <footer class="footer">
-            <div class="footer__caja">
+        <div class="footer__caja">
                 <div class="footer__texto-bloque">
                     <p class="footer__texto">
                         © 2026 Descubriendo lugares de Argentina. Todos los derechos reservados.
@@ -106,7 +76,11 @@
                         <i class="fa-brands fa-twitter"></i>
                     </a>
                 </div>
-             </div>   
-        </footer>      
+            </div>
+    </footer>
+    <script src="js/productos.js"></script>
+    <script src="js/tienda.js"></script>
     </body>
+    
+
 </html>

@@ -1,0 +1,42 @@
+Pasos a seguir:
+
+Lo que harás:
+Declarar tres variables: nombre, correo y mensaje, asignándoles valores de
+prueba.
+Crear una función que valide que ninguna de estas variables esté vacía.
+Si todos los campos tienen texto, mostrar por consola: "Formulario completo. Listo para enviar."
+Si falta completar alguno, mostrar:"Faltan completar campos obligatorios."
+Tips claves:
+Usá el operador && para verificar que todas las variables contengan texto.
+Jugá cambiando los valores de prueba para ver cómo responde tu validación.
+¡Importante! Esta práctica te va a servir para entender la validación de 
+datos antes de enviarlos a un servidor, algo fundamental en cualquier 
+aplicación web
+
+Ejercicio Práctico #2
+
+Iterar una lista de productos y mostrarlos con alert()
+Pasos a seguir:
+Lo que harás:
+Crear un array de al menos 5 productos (por ejemplo: "Remera", "Pantalón",
+"Gorra").
+Recorrer el array con un bucle for o for...of.
+En cada iteración, mostrar el producto con un alert().
+Al finalizar, enviar por consola el mensaje: "Lista de productos mostrada 
+correctamente."
+Tips claves:
+Definí el array como const para practicar buenas prácticas de variables 
+constantes.
+Podés sumar un contador para contar cuántos productos se muestran.
+¡Recordá! Mostrar la información de forma dinámica con bucles es la base p
+ara crear interfaces interactivas más adelante.
+
+const significa que no podés volver a asignar otro array a esa misma v
+ariable, pero sí podés modificar el contenido del array.
+Podés agregar, quitar o modificar elementos dentro del array declarado con 
+const.
+Pero no podés decirle después que sea un array completamente nuevo.
+Recordemos:
+const = su referencia no cambia.
+let = variable flexible, su valor puede cambiar.
+var = forma más vieja, hoy se recomienda evitarla.
