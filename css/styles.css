@@ -397,6 +397,7 @@ body{
     margin: 0 auto;
     gap: 30px;
     min-height: 65vh;
+    position: relative;
 }
 .productos-seccion {
     display: flex;
@@ -438,4 +439,22 @@ body{
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 8px;
+}
+.carrito-seccion{
+    position:fixed;
+    bottom: 20px;
+}
+.tienda__carrito-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color:#336699;
+    padding: 15px;
+    cursor: pointer;
+}
+.tienda__carrito-contador{
+    display: none;
 }

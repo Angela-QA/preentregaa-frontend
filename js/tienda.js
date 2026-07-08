@@ -34,9 +34,8 @@ function actualizarPantallaCarrito(){
     });
     let sumaTotal=0;
     carrito.forEach((prod)=> sumaTotal += prod.precio);
-    totalcarrito.innerHTML+= sumaTotal; 
-    console.log("contenido del carrito",carrito);
-    console.log("la suma total es: ",sumaTotal);
+    totalcarrito.innerHTML= sumaTotal; 
+    
 }
 
 
