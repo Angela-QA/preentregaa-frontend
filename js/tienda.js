@@ -3,6 +3,7 @@ let carrito= [];
 const contenedorTarjetas= document.querySelector('.productos-seccion');
 const listacarrito= document.querySelector('.carrito__lista');
 const totalcarrito= document.querySelector('#carrito_total-valor');
+const contadorcarrito= document.querySelector('.tienda__carrito-contador');
 
 catalogoAventura.forEach((producto)=>{
     contenedorTarjetas.innerHTML +=`
@@ -34,6 +35,10 @@ function actualizarPantallaCarrito(){
     });
     let sumaTotal=0;
     carrito.forEach((prod)=> sumaTotal += prod.precio);
+    contadorcarrito.innerText= carrito.length;
+    if(carrito.length>0){
+        contadorcarrito.style.display='block';
+    }
     totalcarrito.innerHTML= sumaTotal; 
     
 }

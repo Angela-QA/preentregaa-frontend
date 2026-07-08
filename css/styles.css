@@ -457,4 +457,13 @@ body{
 }
 .tienda__carrito-contador{
     display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    background-color: #ff6600;
+    color: white;
+    padding: 2px 6px;
+    border-radius:50%;
+
 }
