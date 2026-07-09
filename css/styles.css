@@ -440,9 +440,18 @@ body{
     font-weight: bold;
     border-radius: 8px;
 }
+/*tocamos posicion cambiamoa de fixed a absoluta*/
 .carrito-seccion{
-    position:fixed;
-    bottom: 20px;
+    position:absolute;
+    top: 60px;
+    /*display: none;*/
+    width: 600px;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    
+
 }
 .tienda__carrito-btn{
     position: absolute;
@@ -465,5 +474,38 @@ body{
     color: white;
     padding: 2px 6px;
     border-radius:50%;
+}
+.carrito__btn-menos, .carrito__btn-mas{ 
+    font-size:24px;
+    background-color:#336699;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.carrito__item{
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
 
+}
+.carrito__item-miniatura{
+    margin-right: 15px;
+    vertical-align: middle;
+}
+.carrito__item-nombre{
+   font-size: 1.3rem;
+   font-weight: bold; 
+   display: inline-block;
+
+}
+.carrito__item-cantidad{
+    font-size: 25px;
+    margin: 0 20px;
+}
+.carrito__item-precio{
+   font-size: 1.3rem;
+   font-weight: bold;  
 }
