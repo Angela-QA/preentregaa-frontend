@@ -2,13 +2,12 @@ let carrito= [];
 
 const contenedorTarjetas= document.querySelector('.productos-seccion');
 const listacarrito= document.querySelector('.carrito__lista');
-const totalcarrito= document.querySelector('#carrito_total-valor');
+//const totalcarrito= document.querySelector('#carrito_total-valor');
 const contadorcarrito= document.querySelector('.tienda__carrito-contador');
-
-
 const botoncarrito= document.querySelector('.tienda__carrito-btn');
 const seccioncarrito= document.querySelector('.carrito-seccion');
 
+//const botonpagar= document.querySelector('carrito__btn-pagar');
 
 catalogoAventura.forEach((producto)=>{
     contenedorTarjetas.innerHTML +=`
@@ -24,7 +23,15 @@ contenedorTarjetas.addEventListener("click",(e)=>{
     if(e.target.classList.contains('producto__boton')){
         const idSeleccionado= e.target.getAttribute('data-id');
         const productoEncontrado= catalogoAventura.find((prod)=> prod.id==idSeleccionado);
-        carrito.push(productoEncontrado);
+        const existe= carrito.find((prod) => prod.id == idSeleccionado);
+        if(existe){
+            existe.cantidad++;
+        }
+            else{
+                carrito.push({...productoEncontrado, cantidad: 1});
+               // productoEncontrado.cantidad= 1;
+                //carrito.push(productoEncontrado);
+            }
         actualizarPantallaCarrito();
     }
 });
@@ -45,20 +52,32 @@ function actualizarPantallaCarrito(){
                     -
                 </button>
                 <span class= "carrito__item-cantidad">
-                    1
+                    ${prod.cantidad}
                 </span>
                 <button class= "carrito__btn-mas" data-id= "${prod.id}">
                     +
                 </button>
             </div>
-            
         </div>
         
         `;
     });
+    calcularTotal();
+    actualizarBurbuja();
+}
+let carritoEscondido= true;
+botoncarrito.addEventListener('click', () =>{
+    seccioncarrito.style.display= carritoEscondido ? 'block' : 'none';
+    carritoEscondido= !carritoEscondido
+    actualizarPantallaCarrito();
+});
+function calcularTotal(){
+    console.log("productos en carrito ",carrito);
     let sumaTotal=0;
-    carrito.forEach((prod)=> sumaTotal += prod.precio);
-    totalcarrito.innerHTML= sumaTotal; 
+    carrito.forEach((prod)=> sumaTotal += (prod.precio * prod.cantidad));
+    document.querySelector('#carrito_total-valor').innerHTML =sumaTotal;
+}
+function actualizarBurbuja(){
     contadorcarrito.innerText= carrito.length;
     if(carrito.length>0){
         contadorcarrito.style.display='block';
@@ -67,26 +86,36 @@ function actualizarPantallaCarrito(){
             contadorcarrito.style.display= 'none';
         }
 }
-botoncarrito.addEventListener('click', () =>{
-    seccioncarrito.style.display= 'block';
+//lista carrito empieza linea 90
+listacarrito.addEventListener('click', (e) => {
+    console.log("click detectado");
+    console.log(e.target);
+    console.log(e.target.className);
+
+
+    const idTexto= e.target.getAttribute('data-id');
+    if(!idTexto) return;
+    const idNumero= Number(idTexto);
+    
+    if(e.target.classList.contains('carrito__btn-mas')){
+        carrito.find((prod) => prod.id === idNumero).cantidad++;;
+    }
+    if(e.target.classList.contains('carrito__btn-menos')){
+        const prod= carrito.find((p) => p.id === idNumero);
+        if (prod && prod.cantidad > 1){
+            prod.cantidad--;
+        } 
+            else {
+                carrito = carrito.filter((p) => p.id !== idNumero);
+            }
+    } 
+    actualizarPantallaCarrito();  
 });
-
-
-
-        
-
-/*function actualizarPantallaCarrito(){
-    listacarrito.innerHTML='';
-    carrito.forEach((prod)=>{
-        listacarrito.innerHTML+=`
-        <p class="carrito__item">
-            ${prod.nombre} - $${prod.precio}
-        </p>
-        
-        `;
-    });
-    let sumaTotal=0;
-    carrito.forEach((prod)=> sumaTotal += prod.precio);
-    totalcarrito.innerHTML= sumaTotal; 
-}*/
-
+seccioncarrito.addEventListener('click', (e) =>{
+    if(e.target.classList.contains('carrito__btn-pagar')){
+        alert("Pago Exitoso. Gracias por confiar en nosotros.");
+        carrito= [];
+        actualizarPantallaCarrito();
+    }
+    
+});

@@ -444,14 +444,12 @@ body{
 .carrito-seccion{
     position:absolute;
     top: 60px;
-    /*display: none;*/
+    display: none;
     width: 600px;
     background-color: rgba(255,255,255,0.95);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     padding: 20px;
-    
-
 }
 .tienda__carrito-btn{
     position: absolute;
@@ -508,4 +506,32 @@ body{
 .carrito__item-precio{
    font-size: 1.3rem;
    font-weight: bold;  
+}
+.carrito__titulo{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold_;
+}
+.carrito__total-bloque{
+    margin-top: 25px;
+    padding: 25px;
+    border-top: 2px solid #e0e0e0;
+}
+.carrito__total-texto{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.carrito__btn-pagar{
+    background-color: #336699;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 15px;
+    float: right;
+    cursor: pointer;
+
 }
