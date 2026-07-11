@@ -1,15 +1,15 @@
-let carrito= [];
-
+let carrito= JSON.parse(localStorage.getItem('carritoAlquilar')) || [] ;
 const contenedorTarjetas= document.querySelector('.productos-seccion');
 const listacarrito= document.querySelector('.carrito__lista');
-//const totalcarrito= document.querySelector('#carrito_total-valor');
 const contadorcarrito= document.querySelector('.tienda__carrito-contador');
 const botoncarrito= document.querySelector('.tienda__carrito-btn');
 const seccioncarrito= document.querySelector('.carrito-seccion');
 
-//const botonpagar= document.querySelector('carrito__btn-pagar');
-
-catalogoAventura.forEach((producto)=>{
+//funcion asincronica para el arranque
+async function iniciarTienda() {
+    const respuesta= await fetch('js/productos.json');
+    const catalogoAventura= await respuesta.json();
+    catalogoAventura.forEach((producto)=>{
     contenedorTarjetas.innerHTML +=`
     <div class= "producto">
         <img src="${producto.imagen}" alt="${producto.nombre}" class= "producto__imagen">
@@ -19,22 +19,27 @@ catalogoAventura.forEach((producto)=>{
         </div>
     `; 
 });
-contenedorTarjetas.addEventListener("click",(e)=>{
+    contenedorTarjetas.addEventListener("click",(e)=>{
     if(e.target.classList.contains('producto__boton')){
         const idSeleccionado= e.target.getAttribute('data-id');
         const productoEncontrado= catalogoAventura.find((prod)=> prod.id==idSeleccionado);
         const existe= carrito.find((prod) => prod.id == idSeleccionado);
         if(existe){
-            existe.cantidad++;
-        }
+           if(existe.cantidad < existe.stock){
+                existe.cantidad++;
+            }
             else{
+                alert("No hay más stock disponibe de este producto");
+            }
+        }else{
                 carrito.push({...productoEncontrado, cantidad: 1});
-               // productoEncontrado.cantidad= 1;
-                //carrito.push(productoEncontrado);
             }
         actualizarPantallaCarrito();
     }
 });
+    
+}
+
 function actualizarPantallaCarrito(){
     listacarrito.innerHTML='';
     carrito.forEach((prod)=>{
@@ -64,6 +69,7 @@ function actualizarPantallaCarrito(){
     });
     calcularTotal();
     actualizarBurbuja();
+    localStorage.setItem('carritoAlquilar', JSON.stringify(carrito));
 }
 let carritoEscondido= true;
 botoncarrito.addEventListener('click', () =>{
@@ -86,19 +92,32 @@ function actualizarBurbuja(){
             contadorcarrito.style.display= 'none';
         }
 }
-//lista carrito empieza linea 90
-listacarrito.addEventListener('click', (e) => {
-    console.log("click detectado");
-    console.log(e.target);
-    console.log(e.target.className);
 
 
-    const idTexto= e.target.getAttribute('data-id');
-    if(!idTexto) return;
-    const idNumero= Number(idTexto);
+seccioncarrito.addEventListener('click', (e) =>{
+    if(e.target.classList.contains('carrito__btn-pagar')){
+        if(carrito.length === 0){
+            alert("Tu pedido de alquiler esta vacio. Agrega productos antes de cliclear pagar.");
+            return;
+        }
+        alert("Pago Exitoso. Gracias por confiar en nosotros.");
+        carrito= [];
+        actualizarPantallaCarrito();
+    }
     
-    if(e.target.classList.contains('carrito__btn-mas')){
-        carrito.find((prod) => prod.id === idNumero).cantidad++;;
+});
+listacarrito.addEventListener('click', (e) => {
+        const idTexto= e.target.getAttribute('data-id');
+        if(!idTexto) return;
+        const idNumero= Number(idTexto);
+        if(e.target.classList.contains('carrito__btn-mas')){
+        const productoEncontrado= carrito.find((prod) => prod.id === idNumero);
+        if(productoEncontrado.cantidad < productoEncontrado.stock){
+            productoEncontrado.cantidad++;
+        }
+            else{
+                alert("No hay más stock disponibe de este producto");
+            }   
     }
     if(e.target.classList.contains('carrito__btn-menos')){
         const prod= carrito.find((p) => p.id === idNumero);
@@ -109,13 +128,7 @@ listacarrito.addEventListener('click', (e) => {
                 carrito = carrito.filter((p) => p.id !== idNumero);
             }
     } 
-    actualizarPantallaCarrito();  
+    actualizarPantallaCarrito(); 
+    localStorage.setItem('carritoAlquilar', JSON.stringify(carrito)); 
 });
-seccioncarrito.addEventListener('click', (e) =>{
-    if(e.target.classList.contains('carrito__btn-pagar')){
-        alert("Pago Exitoso. Gracias por confiar en nosotros.");
-        carrito= [];
-        actualizarPantallaCarrito();
-    }
-    
-});
+iniciarTienda();

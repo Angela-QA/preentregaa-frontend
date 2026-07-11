@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "nombre":"Bota de alta montaña",
+        "precio": 95000,
+        "stock":2,
+        "imagen":"imagenes/botas2.jpg" 
+    },
+    {
+        "id": 2,
+        "nombre":"Bastón de Trekking",
+        "precio": 25000,
+        "stock": 8,
+        "imagen": "imagenes/baston3.jpg"
+    },
+    {
+        "id": 3,
+        "nombre":"Mochila Técnica 60L",
+        "precio": 78000,
+        "stock": 7,
+        "imagen":"imagenes/mochila2.jpg"
+    },
+    {
+        "id": 4,
+        "nombre":"Bolsa de dormir -10C",
+        "precio": 85000,
+        "stock": 8,
+        "imagen": "imagenes/bolsa.jpg"
+    },
+    {
+        "id": 5,
+        "nombre":"Carpa Alta Montaña",
+        "precio": 120000,
+        "stock": 5,
+        "imagen": "imagenes/carpa.jpg"
+    },
+    {
+        "id": 6,
+        "nombre":"Calentador Portátil",
+        "precio": 18000,
+        "stock": 5,
+        "imagen": "imagenes/calentador3.jpg"
+    },
+    {
+        "id": 7,
+        "nombre":"Alquiler de Kayak",
+        "precio": 45000,
+        "stock": 5,
+        "imagen": "imagenes/kayac3.jpg"
+    },
+    {
+        "id": 8,
+        "nombre":"Traje de Neoprene",
+        "precio": 60000,
+        "stock": 4,
+        "imagen": "imagenes/trajeNeoprene.jpg"
+
+    },
+    {
+        "id": 9,
+        "nombre":"Lentes de sol UV400",
+        "precio": 32000,
+        "stock": 7,
+        "imagen": "imagenes/lentes2.jpg"
+    },
+    {
+        "id": 10,
+        "nombre":"GPS Satelital",
+        "precio": 150000,
+        "stock": 3,
+        "imagen": "imagenes/gps.jpg"
+    },
+    {
+        "id":11,
+        "nombre":"Tanque de buceo",
+        "precio": 15000,
+        "stock": 6,
+        "imagen":"imagenes/tanque.jpg"
+    },
+    {
+        "id":12,
+        "nombre": "Linterna led",
+        "precio": 3100,
+        "stock": 10,
+        "imagen": "imagenes/linterna2.jpg"
+    }
+]

@@ -64,6 +64,7 @@ let prod11={
     nombre:"Tanque de buceo",
     precio: 15000,
     imagen:"imagenes/tanque.jpg"
+    
 };
 let prod12={
     id:12,
