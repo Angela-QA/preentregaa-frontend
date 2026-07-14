@@ -100,9 +100,124 @@
                 </div>
             </div>
     </footer>
+    <div id="modal-pago" class="modal" style="display: none;">
+        <div class="modal__contenido">
+            <button id="btn-cerrar-modal" class="modal__cerrar">
+                X;
+            </button>
+            <h2 class="modal__titulo">
+                Simulador de pago seguro
+            </h2>
+            <p class="modal__subtitulo">
+                Total a Pagar: $<span id="modal-total-valor">
+                    0
+                </span>
+            </p>
+            <p class="modal__subtitulo">
+                Total de la cuota: $<span id="modal-cuota-valor">
+                    0
+                </span>
+            </p>
+            <div class="modal__grupo">
+                <div class="modal__tarjetas-logo">
+                    <i class="fa-brands fa-cc-visa">
+                    </i>
+                    <i class="fa-brands fa-cc-mastercard">
+                    </i>
+                </div>
+                <label for="tipo-tarjeta" class="modal__etiqueta">
+                    Tarjeta:
+                </label>
+                <select id="tipo-tarjeta" class="modal__input" required>
+                    <option value="" disabled selected>
+                        Elegi tipo de tarjeta
+                    </option>
+                    <option value="debito">
+                        Tarjeta de Débito
+                    </option>
+                    <option value="credito">
+                        Tarjeta de Crédito
+                    </option>
+                </select>
+            </div>
+            <div id="grupo-cuotas" class="modal__grupo" style="display: none;">
+                <label for="cuotas" class="modal__etiqueta">
+                    Plan de Cuotas
+                </label>
+                <select id="cuotas" class="modal__input">
+                    <option value="1">
+                        1 pago de $<span class="cuota-val-1">
+                            0
+                        </span>
+                    </option>
+                    <option value="3">
+                        3 pagos de $<span class="cuota-val-3">
+                            0
+                        </span>
+                    </option>
+                    <option value="6">
+                        6 pagos de $<span class="cuota-val-6">
+                            0
+                        </span>
+                    </option>
+                    <option value="9">
+                        9 pagos de $<span class="cuota-val-9">
+                            0
+                        </span>
+                    </option>
+                    <option value="12">
+                        12 pagos de $<span class="cuota-val-12">
+                            0
+                        </span>
+                    </option>
+                </select>
+            </div>
+            <div class="modal_grupo">
+                <label for="nombre-titular" class="modal__etiqueta">
+                    Nombre del Titular
+                </label>
+                <input type="text" id="nombre-titular" class="modal__input" placeholder="JUAN PEREZ" required>
+            </div>
+            <div class="modal__grupo">
+                <label for="dni-titular" class="modal__etiqueta">
+                    DNI del Titular
+                </label>
+                <input type="text" id="dni-titular" class="modal__input" placeholder="12345678" required>
+            </div>
+            <div class="modal__grupo">
+                <label for="email-titular" class="modal__etiqueta">
+                    Correo Electrónico
+                </label>
+                <input type="email" id="email-titular" class="modal__input" placeholder="ejemplo@correo.com" required>
+            </div>
+            <div class="modal__grupo">
+                <label for="nro-tarjeta" class="modal__etiqueta">
+                    Número de la tarjeta
+                </label>
+                <input type="text" id="nro-tarjeta" class="modal__input" placeholder="4517 8492 5487" maxlength="19" required>
+            </div>
+            <div class="modal__fila">
+                <div class="modal__grupo">
+                    <label for="expiracion" class="modal__etiqueta">
+                        Vence:
+                    </label>
+                    <input type="text" id="expiracion" class="modal__input" placeholder="MM/AA" maxlength="5" required>
+                </div>
+                <div class="modal__grupo">
+                    <label for="cvv" class="modal__etiqueta">
+                        CVV:
+                    </label>
+                    <input type="password" id="cvv" class="modal__input" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+            
+            <button type="submit" id="btn-pagar-simulacion" class="modal__btn-pagar">
+                    Confirmar Alquiler
+            </button>
+        </div>
+    </div>
     <script src="js/productos.js"></script>
     <script src="js/tienda.js"></script>
-    </body>
     
-
+    </body>
 </html>

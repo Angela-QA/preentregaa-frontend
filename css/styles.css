@@ -12,7 +12,6 @@ body{
     background-position: center;
     background-size: 400px auto;
     padding:0;
-    
 }
 .header__caja{
     display:flex;
@@ -43,8 +42,6 @@ body{
     display:flex;
     justify-content: space-between;
     list-style: none;
-    /*font-family:'Atkinson Hyperlegible';*/
-   /* font-weight:700;*/
     font-size:20px;
     color:black;
 }
@@ -63,7 +60,6 @@ body{
     text-decoration: none;
     color: white;
 }
-
 .main__caja{
     display:flex;
     flex-direction: column;
@@ -86,12 +82,11 @@ body{
     width:500px;
     height:auto;
     flex-shrink: 0;
-
 }
 .main__video-info{
     flex:1;
     margin-left: 35px;
-    /*background-color:rgba(255,255,255,0.5);*/
+    background-color:rgba(255,255,255,0.5);
     border-radius: 4px;
 }
 .main__video-info *{
@@ -174,13 +169,16 @@ body{
     gap: 20px;
 }
 .footer__link-red{
-    color: #f2f2f2;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
 }
 .footer__link-red:hover{
-    color:#ffaa33;
+    cursor: pointer;
 }
  .footer{
     background-color: #6688bb;
@@ -189,8 +187,23 @@ body{
 }
 .footer__texto{
     color:#f2f2f2;
-    font-size:14px;
+    font-size:20px;
 } 
+.fa-instagram {
+    color: #e1306c;
+    font-size: 1.5rem;
+    opacity: 0.9
+}
+.fa-facebook {
+    color: #1877f2;
+    font-size: 1.5rem;
+    opacity: 0.9
+}
+.fa-twitter {
+    color: #1da1f2;
+    font-size: 1.5rem;
+    opacity: 0.9
+}
 .lugares__caja{
     display:flex;
     flex-direction: row;
@@ -199,8 +212,7 @@ body{
     width:100%;
     margin-top:40px;
     flex-wrap: wrap;
-   gap: 30px;
-   
+    gap: 30px;
 } 
 .tarjeta *{
     margin-top: 4px;
@@ -220,7 +232,6 @@ body{
     font-size:0.9rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     margin-bottom: 20px;
-    
 }
 .tarjeta-destacada .tarjeta__boton{
     display:block;
@@ -239,7 +250,6 @@ body{
 .tarjeta__dato{
     display:block;
     font-weight: bold;
-    
 }
 .tarjeta__boton{
     margin-top:20px;
@@ -279,15 +289,6 @@ body{
     color:#ffaa33;
     margin-top: 10px;
 }
- /*Interruptor de emergencia: solo se activa en pantallas menores a 768 pixeles(celu)*/
- @media(max-width:768px){
-    .comentarios{
-        /*que grid se pongan en un única columna*/
-        grid-template-columns: 1fr;
-        /*Achicamos espacios entre estructuras*/
-        gap:20px;
-    }
- }
  .contacto__caja{
     max-width: 600px;
     margin: 40px auto;
@@ -300,8 +301,7 @@ body{
     margin-top: 15px;
     font-weight: bold;
     color: #111111;
-
- }
+}
  .contacto__input,
  .contacto__textarea {
     display: block;
@@ -316,8 +316,7 @@ body{
     transition: border-color 0.35s ease, box-shadow .035s ease;
     font-size: 1.1rem;
     color:#333333;
-
- }
+}
  /*efecto visual de resplandor al pasar el mouse*/
  .contacto__input:focus,
  .contacto__textarea:focus {
@@ -337,12 +336,6 @@ body{
     border-radius: 4px;
     margin-top: 25px;
     cursor: pointer;
-}
-@media(max-width: 768px) {
-    .contacto__input,
-    .contacto__textarea {
-        margin-bottom: 15px;
-    }
 }
 .espaciador-gracias {
     width: 100%;
@@ -387,7 +380,6 @@ body{
 }
 .gracias__boton:hover {
     background-color: #20446a;
-    
 }
 .tienda_caja {
     display: flex;
@@ -408,7 +400,6 @@ body{
 
 .producto__imagen{
     width: 220px;
-
 }
 .producto{
     background-color: rgba(255,255,255,0.45);
@@ -423,14 +414,12 @@ body{
     margin-top: 15px;
     font-size: 1.5rem;
 }
-
 .producto__precio{
     margin-top: 10px;
     margin-bottom: 15px;
     font-size: 1.3rem;
     font-weight: bold;
 }
-
 .producto__boton{
     background-color: #336699;
     color: white;
@@ -440,7 +429,6 @@ body{
     font-weight: bold;
     border-radius: 8px;
 }
-/*tocamos posicion cambiamoa de fixed a absoluta*/
 .carrito-seccion{
     position:absolute;
     top: 60px;
@@ -487,7 +475,6 @@ body{
     margin-bottom: 25px;
     justify-content: space-between;
     align-items: center;
-
 }
 .carrito__item-miniatura{
     margin-right: 15px;
@@ -497,7 +484,6 @@ body{
    font-size: 1.3rem;
    font-weight: bold; 
    display: inline-block;
-
 }
 .carrito__item-cantidad{
     font-size: 25px;
@@ -533,5 +519,116 @@ body{
     margin-top: 15px;
     float: right;
     cursor: pointer;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+.modal__contenido{
+    background-color: rgba(255,255,255,0.98);
+    width: 95%;
+    max-width: 800px;
+    height: auto;
+    max-height: 90vh;
+    padding: 40px;
+    border-radius: 12px;
+    overflow-y: auto;
+}
+.modal__grupo{
+    margin-bottom: 25px;
+    flex-direction: column;
+}
+.modal__tarjetas-logo{
+    font-size: 5rem;
+    margin-right: 10px;
+}
+.modal__etiqueta{
+    font-family: 'Atkinson hiperlegible',sans-serif;
+    font-size: 1.4rem;
+}
+.modal__titulo{
 
+    margin-bottom: 40px;
+}
+.modal__subtitulos{
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 15px;
+}
+.modal__input{
+    padding: 15px;
+    display: block;
+    font-size: 1.3rem;
+}
+.fa-cc-visa{
+    color: #1a1f71;
+}
+.fa-cc-mastercard{
+    color: #ff5f00;
+}
+.modal__btn-pagar{
+    background-color: #336699;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-family: 'Atkinson hiperlegible',sans-serif;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;    
+}
+.efecto-resaltador{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(2055,102,0,0.4);
+    z-index: 1;
+}
+.clase__modal-cerrar{
+    display: block;
+    font-size: 3.0rem;
+    font-weight: bold;
+    color: #336699;
+    background: transparent;
+    border: none;
+    float:right;
+    cursor: pointer;
+}
+.tarjeta-activa{
+    opacity: 1;
+}
+.tarjeta-desactiva{
+    opacity: 0.2;
+}
+@media (max-width: 768px) {
+    
+    .comentarios {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .contacto__input,
+    .contacto__textarea {
+        margin-bottom: 15px;
+    }
+    .carrito-seccion {
+        width: 90%; 
+        top: 80px;
+    }
+    .carrito__btn-menos {
+        width: 95%;
+        padding: 20px;
+    }
+    .modal__tarjetas-logo {
+        font-size: 3.5rem; 
+    }
 }
